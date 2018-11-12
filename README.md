@@ -4,6 +4,21 @@ Micromaterials app for learning Sanskrit.
 
 > Inspired by [Adam Leskis'](https://github.com/lpmi-13) micromaterials for learning English.
 
+![Om](logo.png)
+
+## What Micromaterials Are There?
+
+There's just the one right now:
+
+* _Alphabet_ :: to help learn the Devanagari.
+
+> Inspired by [Typewar](http://typewar.com/).
+
+## What Micromaterial Are Planned?
+
+* Joining consonants with vowels.
+* Joining consonants with consonants ([conjunction](http://learnsanskrit.org/references/devanagari/conjunct)).
+
 ## Project setup
 ```
 yarn install
