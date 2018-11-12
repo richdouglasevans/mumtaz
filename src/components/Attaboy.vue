@@ -29,7 +29,7 @@ export default {
         choseWrongly: function () {
             return this.streak === 0 && this.hasChosenAtLeastOnce;
         },
-        ...mapState('alphabet', ['streak', 'round', 'hasChosenAtLeastOnce'])
+        ...mapState('alphabet', ['streak', 'hasChosenAtLeastOnce'])
     }
 };
 </script>

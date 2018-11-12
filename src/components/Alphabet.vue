@@ -29,7 +29,7 @@ import Attaboy from '@/components/Attaboy';
 import BigLetter from '@/components/BigLetter';
 import { createNamespacedHelpers } from 'vuex';
 
-const { mapState, mapGetters } = createNamespacedHelpers('alphabet');
+const { mapState } = createNamespacedHelpers('alphabet');
 
 export default {
   components: { Letter, BigLetter, Streak, Attaboy },
@@ -37,8 +37,7 @@ export default {
     this.startOver();
   },
   computed: {
-    ...mapState(['letters', 'streak', 'round', 'lastChoiceWasWrong']),
-    ...mapGetters(['wasWrong'])
+    ...mapState(['round'])
   },
   methods: {
     startOver: function () {
