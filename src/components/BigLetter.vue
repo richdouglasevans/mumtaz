@@ -1,7 +1,7 @@
 <template>
-  <div @click="chooseThisLetter">
-    <img :src="pathToImage" :alt="altText">
-  </div>
+  <img :src="pathToImage"
+        :alt="altText"
+        @click="chooseThisLetter">
 </template>
 
 <script>
@@ -29,10 +29,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-div {
-  padding-top: 20px;
-}
 img {
+  padding-top: 10px;
   width: 60%;
   height: 60%;
 }
@@ -41,6 +39,7 @@ img {
   img {
     width: 40%;
     height: 40%;
+    align-self: center;
   }
 }
 </style>

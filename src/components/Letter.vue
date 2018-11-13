@@ -1,7 +1,6 @@
 <template>
-  <div @click="chooseThisLetter">
-    <span v-html="letter.romanization"></span>
-  </div>
+  <div v-html="letter.romanization"
+        @click="chooseThisLetter"/>
 </template>
 
 <script>

@@ -5,6 +5,9 @@
   "alphabet.footer": "Brought to you by 2018&rsquo;s <a href=\"https://www.conted.ox.ac.uk/courses/sanskrit-1-beginners?code=O18P638XNW\">Sanskrit 1 :: Beginners</a>",
 
   "attaboy.nice": "Sadhu",
+  "attaboy.nice.image": "img/smile_128.png",
   "attaboy.excellent": "ممتاز‎",
-  "attaboy.nope": "Nope"
+  "attaboy.excellent.image": "img/cupcake_128.png",
+  "attaboy.nope": "Nope",
+  "attaboy.nope.image": "img/nope_128.png"
 }

@@ -1,17 +1,8 @@
 <template>
   <div>
-    <img src="img/cupcake_128x128.png"
-         :alt="$t('attaboy.excellent')"
-         :title="$t('attaboy.excellent')"
-         v-if="isOnSweetStreak">
-    <img src="img/smile_128x128.png"
-         :alt="$t('attaboy.nice')"
-         :title="$t('attaboy.nice')"
-         v-else-if="isStreaking">
-    <img src="img/nope_128x128.png"
-         :alt="$t('attaboy.nope')"
-         :title="$t('attaboy.nope')"
-         v-else-if="choseWrongly">
+    <img :src="$t(`attaboy.${attaboy}.image`)"
+         :alt="$t(`attaboy.${attaboy}`)"
+         v-if="attaboy">
   </div>
 </template>
 
@@ -19,15 +10,23 @@
 import { mapState } from 'vuex';
 
 export default {
-    computed: {
-        isOnSweetStreak: function () {
+    methods: {
+        isOnSweetStreak() {
             return this.streak !== 0 && this.streak % 5 === 0;
         },
-        isStreaking: function () {
+        isStreaking() {
             return this.streak > 0;
         },
-        choseWrongly: function () {
+        choseWrongly() {
             return this.streak === 0 && this.hasChosenAtLeastOnce;
+        },
+    },
+    computed: {
+        attaboy: function () {
+            return this.isOnSweetStreak() ? 'excellent'
+                : this.isStreaking() ? 'nice'
+                    : this.choseWrongly() ? 'nope'
+                        : null;
         },
         ...mapState('alphabet', ['streak', 'hasChosenAtLeastOnce'])
     }
@@ -39,5 +38,10 @@ div {
   flex: 2;
   margin: 10px;
   align-self: center;
+}
+img {
+    $image-width: 96px;
+    width: $image-width;
+    height: $image-width;
 }
 </style>
