@@ -3,6 +3,18 @@ import shuffle from 'lodash.shuffle';
 
 const allLetters = Object.freeze([
     {
+        name: 'a',
+        image: 'a.svg',
+        unicode: '&#x0905',
+        romanization: 'a'
+    },
+    {
+        name: 'aa',
+        image: 'aa.svg',
+        unicode: '&#x0906',
+        romanization: 'ā'
+    },
+    {
         name: 'i',
         image: 'i.svg',
         unicode: '&#x0907',
@@ -189,6 +201,12 @@ const allLetters = Object.freeze([
         romanization: 'ña'
     },
     {
+        name: 'pa',
+        image: 'pa.svg',
+        unicode: '&#x092A',
+        romanization: 'pa'
+    },
+    {
         name: 'pha',
         image: 'pha.svg',
         unicode: '&#x092B',
@@ -223,6 +241,12 @@ const allLetters = Object.freeze([
         image: 'ttha.svg',
         unicode: '&#x0920',
         romanization: 'ṭha'
+    },
+    {
+        name: 'va',
+        image: 'va.svg',
+        unicode: '&#x0935',
+        romanization: 'va'
     },
     {
         name: 'ya',
