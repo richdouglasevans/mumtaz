@@ -42,7 +42,7 @@ div {
   align-self: center;
 }
 img {
-  $image-width: 96px;
+  $image-width: 110px;
   width: $image-width;
   height: $image-width;
 }

@@ -22,4 +22,11 @@ a {
     color: whitesmoke;
   }
 }
+
+@media (min-width: 400px) {
+  #app {
+    margin: auto;
+    width: 400px;
+  }
+}
 </style>
