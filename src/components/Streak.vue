@@ -39,5 +39,6 @@ section {
 .label {
   text-transform: uppercase;
   font-size: 0.85em;
+  color: black;
 }
 </style>

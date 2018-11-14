@@ -15,11 +15,10 @@
 }
 
 a {
-  color: whitesmoke;
-  text-decoration: none;
+  color: black;
 
   &:visited {
-    color: whitesmoke;
+    color: black;
   }
 }
 
