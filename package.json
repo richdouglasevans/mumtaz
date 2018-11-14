@@ -7,7 +7,10 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:e2e": "vue-cli-service test:e2e",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit",
+    "icons": "npx vsvg -s src/assets/devanagari -t src/components/devanagari",
+    "prebuild": "npm run icons",
+    "start": "npm run serve"
   },
   "dependencies": {
     "lodash.shuffle": "^4.2.0",
@@ -34,6 +37,7 @@
     "sass-loader": "^7.0.1",
     "vue-cli-plugin-i18n": "^0.5.1",
     "vue-svg-loader": "^0.11.0",
+    "vue-svgicon": "^3.2.1",
     "vue-template-compiler": "^2.5.17"
   }
 }

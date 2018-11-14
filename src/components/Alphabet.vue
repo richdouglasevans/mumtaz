@@ -23,13 +23,11 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
 import Streak from '@/components/Streak';
 import Letter from '@/components/Letter';
 import Attaboy from '@/components/Attaboy';
 import BigLetter from '@/components/BigLetter';
-import { createNamespacedHelpers } from 'vuex';
-
-const { mapState } = createNamespacedHelpers('alphabet');
 
 export default {
   components: { Letter, BigLetter, Streak, Attaboy },
@@ -37,7 +35,7 @@ export default {
     this.startOver();
   },
   computed: {
-    ...mapState(['round'])
+    ...mapState('alphabet', ['round'])
   },
   methods: {
     startOver: function () {

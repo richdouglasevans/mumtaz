@@ -1,10 +1,12 @@
 <template>
-  <img :src="pathToImage"
-        :alt="altText"
-        @click="chooseThisLetter">
+  <devanagari :name="letter.name"
+              height="9em"
+              @click="chooseThisLetter"/>
 </template>
 
 <script>
+import '@/components/devanagari';
+
 export default {
   props: {
     letter: {
@@ -12,16 +14,8 @@ export default {
       required: true
     }
   },
-  computed: {
-    pathToImage: function () {
-      return `img/devanagari/${this.letter.image}`;
-    },
-    altText: function () {
-      return this.letter.name;
-    }
-  },
   methods: {
-    chooseThisLetter: function (e) {
+    chooseThisLetter: function () {
       this.$emit('letter-chosen', this.letter);
     }
   }
@@ -29,17 +23,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-img {
+svg {
   padding-top: 10px;
-  width: 60%;
-  height: 60%;
-}
-
-@media (min-width: 320px) {
-  img {
-    width: 40%;
-    height: 40%;
-    align-self: center;
-  }
 }
 </style>
