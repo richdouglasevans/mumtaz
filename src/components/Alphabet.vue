@@ -60,9 +60,9 @@ main {
   align-content: center;
 }
 h1 {
-  padding: 10px;
+  padding: 7px;
   padding-bottom: 0;
-  font-size: 250%;
+  font-size: 2.1em;
   color: aliceblue;
   margin: 0;
   background-color: $c-batman;
