@@ -299,6 +299,7 @@ export const alphabet = {
                 number: 0
             },
             streak: 0,
+            longestStreak: 0,
             hasChosenAtLeastOnce: false
         };
     },
@@ -317,6 +318,9 @@ export const alphabet = {
         },
         INCREMENT_STREAK: function (state) {
             state.streak = state.streak + 1;
+            if (state.longestStreak < state.streak) {
+                state.longestStreak = state.streak;
+            }
         },
         RESET_STREAK: function (state) {
             state.streak = 0;
@@ -327,6 +331,7 @@ export const alphabet = {
         RESET: function (state) {
             state.letters = Object.assign({}, allLetters);
             state.streak = 0;
+            state.longestStreak = 0;
             state.round.number = 0;
             state.hasChosenAtLeastOnce = false;
         },

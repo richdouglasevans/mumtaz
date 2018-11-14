@@ -1,6 +1,6 @@
 <template>
   <devanagari :name="letter.name"
-              height="9em"
+              height="7em"
               @click="chooseThisLetter"/>
 </template>
 
@@ -24,6 +24,6 @@ export default {
 
 <style lang="scss" scoped>
 svg {
-  padding-top: 10px;
+  margin-top: 10px;
 }
 </style>

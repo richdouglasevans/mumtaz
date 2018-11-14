@@ -1,8 +1,14 @@
 <template>
-  <div>
-    <h2>{{streak}}</h2>
-    <span>{{$t('alphabet.streak')}}</span>
-  </div>
+  <section>
+    <div class="streak">
+      <span class="label">{{$t('alphabet.streak')}}</span>
+      <span class="value">{{streak}}</span>
+    </div>
+    <div class="longestStreak">
+      <span class="value">{{longestStreak}}</span>
+      <span class="label">{{$t('alphabet.longestStreak')}}</span>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -10,19 +16,28 @@ import { mapState } from 'vuex';
 
 export default {
   computed: {
-    ...mapState('alphabet', ['streak'])
+    ...mapState('alphabet', ['streak', 'longestStreak'])
   }
 };
 </script>
 
 <style lang="scss" scoped>
-div {
+$c-banana: aliceblue;
+
+section {
   flex: 1;
-  margin: 5px;
-  color: aliceblue;
-  font-size: 25px;
+  margin: 5px 20px 5px;
+  color: $c-banana;
 }
-h2 {
-  margin-top: 10px;
+.streak {
+  border-bottom: 1px dashed $c-banana;
+}
+.value {
+  display: block;
+  font-size: 3em;
+}
+.label {
+  text-transform: uppercase;
+  font-size: 0.85em;
 }
 </style>

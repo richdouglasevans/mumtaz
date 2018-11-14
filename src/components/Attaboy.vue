@@ -12,13 +12,15 @@ import { mapState } from 'vuex';
 export default {
     methods: {
         isOnSweetStreak() {
-            return this.streak !== 0 && this.streak % 5 === 0;
+            return this.streak !== 0
+                && this.streak % 5 === 0;
         },
         isStreaking() {
             return this.streak > 0;
         },
         choseWrongly() {
-            return this.streak === 0 && this.hasChosenAtLeastOnce;
+            return this.streak === 0
+                && this.hasChosenAtLeastOnce;
         },
     },
     computed: {
@@ -40,8 +42,8 @@ div {
   align-self: center;
 }
 img {
-    $image-width: 96px;
-    width: $image-width;
-    height: $image-width;
+  $image-width: 96px;
+  width: $image-width;
+  height: $image-width;
 }
 </style>
