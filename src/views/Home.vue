@@ -1,15 +1,15 @@
 <template>
   <section class="home">
-    <alphabet/>
+    <letterforms/>
   </section>
 </template>
 
 <script>
-import Alphabet from "@/components/Alphabet.vue";
+import Letterforms from "@/components/Letterforms.vue";
 
 export default {
   components: {
-    Alphabet
+    Letterforms
   }
 };
 </script>

@@ -30,7 +30,7 @@ export default {
                     : this.choseWrongly() ? 'nope'
                         : null;
         },
-        ...mapState('alphabet', ['streak', 'hasChosenAtLeastOnce'])
+        ...mapState('letterforms', ['streak', 'hasChosenAtLeastOnce'])
     }
 };
 </script>

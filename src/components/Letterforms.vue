@@ -35,17 +35,17 @@ export default {
     this.startOver();
   },
   computed: {
-    ...mapState('alphabet', ['round'])
+    ...mapState('letterforms', ['round'])
   },
   methods: {
     startOver: function () {
-      this.$store.dispatch('alphabet/START_OVER');
+      this.$store.dispatch('letterforms/START_OVER');
     },
     skipLetter: function () {
-      this.$store.dispatch('alphabet/NEW_ROUND');
+      this.$store.dispatch('letterforms/NEW_ROUND');
     },
     onLetterChosen: function (chosenLetter) {
-      this.$store.dispatch('alphabet/CHOOSE_LETTER', chosenLetter);
+      this.$store.dispatch('letterforms/CHOOSE_LETTER', chosenLetter);
     }
   }
 };

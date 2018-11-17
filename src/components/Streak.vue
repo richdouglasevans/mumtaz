@@ -16,7 +16,7 @@ import { mapState } from 'vuex';
 
 export default {
   computed: {
-    ...mapState('alphabet', ['streak', 'longestStreak'])
+    ...mapState('letterforms', ['streak', 'longestStreak'])
   }
 };
 </script>
