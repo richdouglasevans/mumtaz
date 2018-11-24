@@ -31,6 +31,9 @@ export const freshLetters = (state) => Object.assign({}, state, {
     letters: Object.assign({}, allLetters())
 });
 
+const otherLetters = (letters, exceptThisLetter) =>
+    letters.filter(letter => letter.name !== exceptThisLetter.name);
+
 export const newRound = (state) => {
     const [letter, remainingLetters] = pullLetter(state.letters);
     return Object.assign({}, state, {
@@ -38,7 +41,7 @@ export const newRound = (state) => {
             letter,
             transliterations: shuffle([
                 letter,
-                ...pullLetters(remainingLetters)
+                ...pullLetters(otherLetters(allLetters(), letter))
             ])
         },
         letters: remainingLetters
@@ -63,7 +66,8 @@ export const pullLetters = (letters, amount = 2) => {
         });
 };
 
-export const lettersAreExhausted = (letters) => Object.keys(letters).length === 0;
+export const lettersAreExhausted = (letters) =>
+    Object.keys(letters).length === 0;
 
 export const chosenLetterMatches = (letterForThisRound, chosenLetter) =>
     letterForThisRound.name === chosenLetter.name

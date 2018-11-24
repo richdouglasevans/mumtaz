@@ -10,5 +10,9 @@
   "attaboy.excellent": "ممتاز‎",
   "attaboy.excellent.image": "img/cupcake_128.png",
   "attaboy.nope": "Nope",
-  "attaboy.nope.image": "img/nope_128.png"
+  "attaboy.nope.image": "img/nope_128.png",
+
+  "lobby.heading": "देवनागरी",
+
+  "letterforms.routeTo.label": "All The Letters"
 }

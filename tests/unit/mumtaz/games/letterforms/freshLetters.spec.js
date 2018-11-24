@@ -7,10 +7,10 @@ describe('freshLetters', function () {
     it('yields fresh letters.', function () {
         const originalState = Object.freeze({
             letters: Object.freeze([
-                Object.freeze({ name: 'a' }),
-                Object.freeze({ name: 'b' }),
-                Object.freeze({ name: 'c' })
-            ])
+                { name: 'a' },
+                { name: 'b' },
+                { name: 'c' }
+            ]).map(Object.freeze)
         });
 
         const newState = freshLetters(originalState);

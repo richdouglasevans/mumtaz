@@ -3,7 +3,7 @@ import Vue from 'vue';
 
 Vue.use(VueSvgIcon, {
     tagName: 'devanagari',
-    classPrefix: 'devanagari-',
+    classPrefix: 'devanagari',
 });
 
 export default VueSvgIcon;

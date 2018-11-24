@@ -16,9 +16,6 @@
       <streak/>
       <attaboy/>
     </div>
-    <div class="footer">
-      <span v-html="$t('alphabet.footer')"></span>
-    </div>
   </main>
 </template>
 
@@ -53,6 +50,7 @@ export default {
 
 <style lang="scss" scoped>
 $c-batman: MediumSeaGreen;
+$c-tetsuo: #333300;
 
 main {
   display: flex;
@@ -61,9 +59,8 @@ main {
 }
 h1 {
   padding: 7px;
-  padding-bottom: 0;
   font-size: 2.1em;
-  color: aliceblue;
+  color: $c-tetsuo;
   margin: 0;
   background-color: $c-batman;
 }
@@ -81,10 +78,6 @@ h1 {
   align-items: stretch;
   padding-top: 10px;
   padding-bottom: 20px;
-}
-.footer {
-  margin-top: 20px;
-  font-style: italic;
 }
 
 @media (min-width: 320px) {
