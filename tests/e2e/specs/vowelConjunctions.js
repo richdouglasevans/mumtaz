@@ -1,8 +1,8 @@
-describe('The Alphabet', () => {
+describe('Vowel Conjunctions', () => {
 
   beforeEach(function () {
     cy.viewport(320, 568);
-    cy.visit('/');
+    cy.visit('/#/vowels');
   });
 
   it('must link back to the course page.', () => {

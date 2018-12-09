@@ -8,51 +8,40 @@ Micromaterials app for learning Sanskrit.
 
 ## What Micromaterials Are There?
 
-There's just the one right now:
-
-* _Alphabet_ :: to help learn the Devanagari.
+* _Alphabet_ :: recognizing the Devanagari letterforms.
 
 > Inspired by [Typewar](http://typewar.com/).
 
+* _Vowel Conjunction_ :: joining consonants with vowels.
+
 ## What Micromaterial Are Planned?
 
-* Joining consonants with vowels.
 * Joining consonants with consonants ([conjunction](http://learnsanskrit.org/references/devanagari/conjunct)).
 
-## Project setup
-```
-yarn install
-```
+## Reference
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+* [Unicode Characters in the Devanagari Block](http://www.fileformat.info/info/unicode/block/devanagari/list.htm)
+* [Devanagari Script Unicode Entity Codes](http://sites.psu.edu/symbolcodes/languages/southasia/devanagari/devanagarichart/)
+* [Conjunct Consonants](http://learnsanskrit.org/references/devanagari/conjunct)
+* [Devanagari Letters](https://commons.wikimedia.org/wiki/Category:Devanagari_letters)
+* [Sanskrit 1: Beginners](https://www.conted.ox.ac.uk/courses/sanskrit-1-beginners?code=O18P638XNW)
 
-### Compiles and minifies for production
-```
-yarn run build
-```
+## Emojis
 
-### Run your tests
-```
-yarn run test
-```
+Emojis by [EmojiOne](https://www.emojione.com/).
 
-### Lints and fixes files
-```
-yarn run lint
-```
+## Joining
 
-### Run your end-to-end tests
-```
-yarn run test:e2e
-```
-
-### Run your unit tests
-```
-yarn run test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+    <!-- <div id="scratch"> -->
+      <!-- &#x903;&#x93f; -->
+      <!-- &#x0915;&#x93f;
+      <br>
+      &#x939;&#x93f; -->
+      <!-- <br>&#x0924; &#x094D; &#x200D; &#x0928;
+      <br>&#x0924;&#x094D;&#x200D;&#x0928;
+      <br>&#x0924;&#x094D; -->
+      <!-- halant symbol appended -->
+      <!-- &‌#x0901; -->
+      <!-- &#x0905; -->
+      <!-- &‌#x092F;&‌#x0917;&‌#x094B;&‌#x0440;&‌#x0940; -->
+    <!-- </div> -->

@@ -1,8 +1,7 @@
 import { expect } from 'chai';
-import { incrementStreak } from '../../../../../src/mumtaz/games/letterforms';
+import { incrementStreak } from '../../../../../src/mumtaz/games/support/streak';
 
 describe('incrementStreak', function () {
-
     it('increments the existing streak by 1.', function () {
         const state = { streak: 7 };
         const newState = incrementStreak(state);

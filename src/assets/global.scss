@@ -1,0 +1,44 @@
+$c-batman: MediumSeaGreen;
+$c-apricot: #ff9933;
+$c-metallo: aliceblue;
+$c-tetsuo: #333300;
+
+body {
+  font-family: "EB Garamond", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $c-apricot;
+  margin: 0;
+}
+
+a {
+  color: $c-tetsuo;
+  &:visited {
+    color: $c-tetsuo;
+  }
+}
+
+.banner {
+  padding: 7px;
+  font-size: 2.1em;
+  color: $c-tetsuo;
+  margin: 0;
+  background-color: $c-batman;
+}
+
+.footer {
+  margin-top: 20px;
+  font-style: italic;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+@media (min-width: 320px) {
+  .status {
+    padding-bottom: 10px;
+  }
+}

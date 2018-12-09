@@ -12,25 +12,32 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
-
 export default {
+  props: {
+    namespace: {
+      type: String,
+      required: true
+    }
+  },
   computed: {
-    ...mapState('letterforms', ['streak', 'longestStreak'])
+    streak: function () {
+      return this.$store.state[this.namespace].streak;
+    },
+    longestStreak: function () {
+      return this.$store.state[this.namespace].longestStreak;
+    }
   }
 };
 </script>
 
 <style lang="scss" scoped>
-$c-banana: aliceblue;
-
 section {
   flex: 1;
   margin: 5px 20px 5px;
-  color: $c-banana;
+  color: $c-metallo;
 }
 .streak {
-  border-bottom: 1px dashed $c-banana;
+  border-bottom: 1px dashed $c-metallo;
 }
 .value {
   display: block;
@@ -39,6 +46,7 @@ section {
 .label {
   text-transform: uppercase;
   font-size: 0.85em;
-  color: black;
+  color: $c-tetsuo;
+  font-weight: bold;
 }
 </style>
