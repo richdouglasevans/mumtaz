@@ -2,7 +2,6 @@ import { expect } from 'chai';
 import { chosenLetterMatches } from '../../../../../src/mumtaz/games/letterforms';
 
 describe('chosenLetterMatches', function () {
-
     it('returns true when the chosen letter matches.', function () {
         const chosenLetter = { name: 'a' };
         const targetLetter = { name: 'a' };

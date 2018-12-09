@@ -4,9 +4,9 @@ import {
     resetStreak,
     refresh,
     incrementStreak,
-    lettersAreExhausted,
-    chosenLetterMatches
-} from '../mumtaz/games/letterforms';
+    conjunctionMatches,
+    vowelsAreExhausted
+} from '../mumtaz/games/vowels';
 
 export const Mutations = {
     Reset: 'RESET',
@@ -20,17 +20,20 @@ export const Mutations = {
 export const Actions = {
     StartOver: 'START_OVER',
     NewRound: 'NEW_ROUND',
-    ChooseLetter: 'CHOOSE_LETTER'
+    ChooseConjunction: 'CHOOSE_CONJUNCTION'
 };
 
-export const letterforms = {
+export const vowels = {
     namespaced: true,
     state: initialState,
     mutations: {
-        [Mutations.NewRound]: function(state) {
+        [Mutations.Reset]: function (state) {
+            Object.assign(state, initialState());
+        },
+        [Mutations.NewRound]: function (state) {
             Object.assign(state, newRound(state));
         },
-        [Mutations.IncrementStreak]: function(state) {
+        [Mutations.IncrementStreak]: function (state) {
             Object.assign(state, incrementStreak(state));
         },
         [Mutations.ResetStreak]: function (state) {
@@ -38,9 +41,6 @@ export const letterforms = {
         },
         [Mutations.HasChosenAtLeastOnce]: function (state) {
             state.hasChosenAtLeastOnce = true;
-        },
-        [Mutations.Reset]: function (state) {
-            Object.assign(state, initialState());
         },
         [Mutations.Refresh]: function (state) {
             Object.assign(state, refresh(state));
@@ -52,14 +52,14 @@ export const letterforms = {
             commit(Mutations.NewRound);
         },
         [Actions.NewRound]: function ({ commit, state }) {
-            if (lettersAreExhausted(state.letters)) {
+            if (vowelsAreExhausted(state.vowels)) {
                 commit(Mutations.Refresh);
             }
             commit(Mutations.NewRound);
         },
-        [Actions.ChooseLetter]: function ({ commit, dispatch, state }, chosenLetter) {
+        [Actions.ChooseConjunction]: function ({ commit, dispatch, state }, conjunction) {
             commit(Mutations.HasChosenAtLeastOnce);
-            if (chosenLetterMatches(state.round.letter, chosenLetter)) {
+            if (conjunctionMatches(state.round.conjunction, conjunction)) {
                 commit(Mutations.IncrementStreak);
                 dispatch(Actions.NewRound);
             } else {
