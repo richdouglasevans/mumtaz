@@ -23,13 +23,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$c-tetsuo: #333300;
-
 svg {
   margin-top: 10px;
 }
 
-.devanagari-icon {
+.deva-icon {
   color: $c-tetsuo;
   fill: currentColor;
   stroke: currentColor;

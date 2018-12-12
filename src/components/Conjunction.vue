@@ -28,8 +28,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$c-tetsuo: #333300;
-
 h2 {
   font-size: 3.1em;
   color: $c-tetsuo;

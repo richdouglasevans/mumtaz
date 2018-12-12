@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="game">
     <h1 class="banner"
         :title="$t('vowel-conjunctions.title.altText')"
         @click="startOver">
@@ -12,22 +12,18 @@
                    :conjunction="choice"
                    @conjunction-chosen="onConjunctionChosen"/>
     </div>
-    <div class="status">
-      <streak namespace="vowels"/>
-      <attaboy namespace="vowels"/>
-    </div>
+    <streak namespace="vowels"/>
   </main>
 </template>
 
 <script>
 import { mapState } from 'vuex';
-import Streak from '@/components/Streak';
-import Attaboy from '@/components/Attaboy';
+import Streak from '@/components/streak/Streak';
 import Conjunction from '@/components/Conjunction';
 import BigConjunction from '@/components/BigConjunction';
 
 export default {
-  components: { BigConjunction, Conjunction, Streak, Attaboy },
+  components: { BigConjunction, Conjunction, Streak },
   created: function () {
     this.startOver();
   },
@@ -47,12 +43,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-main {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  color: $c-tetsuo;
-}
 .conjunctions {
   display: flex;
   flex-direction: row;

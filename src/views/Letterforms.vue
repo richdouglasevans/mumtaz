@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="game">
     <h1 class="banner"
         :title="$t('alphabet.title.altText')"
         @click="startOver">
@@ -13,22 +13,18 @@
               :letter="letter"
               @letter-chosen="onLetterChosen"/>
     </div>
-    <div class="status">
-      <streak namespace="letterforms"/>
-      <attaboy namespace="letterforms"/>
-    </div>
+    <streak namespace="letterforms"/>
   </main>
 </template>
 
 <script>
 import { mapState } from 'vuex';
-import Streak from '@/components/Streak';
 import Letter from '@/components/Letter';
-import Attaboy from '@/components/Attaboy';
 import BigLetter from '@/components/BigLetter';
+import Streak from '@/components/streak/Streak';
 
 export default {
-  components: { Letter, BigLetter, Streak, Attaboy },
+  components: { Letter, BigLetter, Streak },
   created: function () {
     this.startOver();
   },
@@ -50,11 +46,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-main {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-}
 .transliterations {
   display: flex;
   flex-direction: row;

@@ -7,13 +7,12 @@ body {
   font-family: "EB Garamond", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: 0;
   background-color: $c-apricot;
+  margin: 0;
 }
 
 a {
   color: $c-tetsuo;
-
   &:visited {
     color: $c-tetsuo;
   }
@@ -32,14 +31,10 @@ a {
   font-style: italic;
 }
 
-.status {
-  background-color: $c-batman;
+.game {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: stretch;
-  padding-top: 10px;
-  padding-bottom: 20px;
+  flex-direction: column;
+  align-content: center;
 }
 
 @media (min-width: 320px) {

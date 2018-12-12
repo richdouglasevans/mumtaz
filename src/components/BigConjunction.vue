@@ -48,8 +48,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$c-tetsuo: #333300;
-
 h2 {
   margin: 5px;
   font-size: 3.1em;

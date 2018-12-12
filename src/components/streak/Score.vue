@@ -31,16 +31,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$c-banana: aliceblue;
-$c-tetsuo: #333300;
-
 section {
   flex: 1;
   margin: 5px 20px 5px;
-  color: $c-banana;
+  color: $c-metallo;
 }
 .streak {
-  border-bottom: 1px dashed $c-banana;
+  border-bottom: 1px dashed $c-metallo;
 }
 .value {
   display: block;
