@@ -1,4 +1,6 @@
-export const LetterTypes = Object.freeze({
+import freeze from 'deep-freeze-node';
+
+export const LetterTypes = freeze({
     Vowel: 1,
     Consonant: 2
 });
@@ -11,7 +13,7 @@ export function isConsonant(letter) {
     return letter.letterType === LetterTypes.Consonant;
 }
 
-const allLetters = Object.freeze([
+const allLetters = freeze([
     {
         name: 'a',
         encodings: { htmlEntityHex: '&#x0905;' },
@@ -321,11 +323,11 @@ const allLetters = Object.freeze([
         romanization: 'ya',
         letterType: LetterTypes.Consonant
     }
-].map(Object.freeze));
+]);
 
-const allVowels = Object.freeze(allLetters.filter(isVowel));
+const allVowels = freeze(allLetters.filter(isVowel));
 
-const allConsonants = Object.freeze(allLetters.filter(isConsonant));
+const allConsonants = freeze(allLetters.filter(isConsonant));
 
 export const letters = () => allLetters;
 

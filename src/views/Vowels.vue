@@ -17,27 +17,28 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { createNamespacedHelpers } from 'vuex';
+
+import { Actions } from '@/stores/vowels';
+
 import Streak from '@/components/streak/Streak';
 import Conjunction from '@/components/Conjunction';
 import BigConjunction from '@/components/BigConjunction';
+
+const { mapState, mapActions } = createNamespacedHelpers('vowels');
 
 export default {
   components: { BigConjunction, Conjunction, Streak },
   created: function () {
     this.startOver();
   },
-  computed: {
-    ...mapState('vowels', ['round'])
-  },
+  computed: mapState(['round']),
   methods: {
-    startOver: function () {
-      this.$store.dispatch('vowels/START_OVER');
-    },
-    onConjunctionChosen: function (chosenConjunction) {
-      this.$store.dispatch('vowels/CHOOSE_CONJUNCTION', chosenConjunction);
-    },
-    keyFor: (conjunction) => `${conjunction.consonant.name}-${conjunction.vowel.name}`
+    keyFor: (c) => `${c.consonant.name}-${c.vowel.name}`,
+    ...mapActions({
+      startOver: Actions.StartOver,
+      onConjunctionChosen: Actions.ChooseConjunction
+    })
   }
 };
 </script>

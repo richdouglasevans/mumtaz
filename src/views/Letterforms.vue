@@ -18,30 +18,25 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { createNamespacedHelpers } from 'vuex';
+import { Actions } from '@/stores/letterforms';
 import Letter from '@/components/Letter';
 import BigLetter from '@/components/BigLetter';
 import Streak from '@/components/streak/Streak';
+
+const { mapState, mapActions } = createNamespacedHelpers('letterforms');
 
 export default {
   components: { Letter, BigLetter, Streak },
   created: function () {
     this.startOver();
   },
-  computed: {
-    ...mapState('letterforms', ['round'])
-  },
-  methods: {
-    startOver: function () {
-      this.$store.dispatch('letterforms/START_OVER');
-    },
-    skipLetter: function () {
-      this.$store.dispatch('letterforms/NEW_ROUND');
-    },
-    onLetterChosen: function (chosenLetter) {
-      this.$store.dispatch('letterforms/CHOOSE_LETTER', chosenLetter);
-    }
-  }
+  computed: mapState(['round']),
+  methods: mapActions({
+    startOver: Actions.StartOver,
+    skipLetter: Actions.NewRound,
+    onLetterChosen: Actions.ChooseLetter
+  })
 };
 </script>
 
