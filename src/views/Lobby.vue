@@ -3,7 +3,8 @@
     <h1 class="banner">{{ $t('lobby.heading') }}</h1>
     <router-link v-for="game in games"
                  :key="game.name"
-                 :to="game.route">
+                 :to="game.route"
+                 :data-cy="game.name">
       <button :title="$t(`${game.name}.routeTo.label.altText`)">
         {{ $t(`${game.name}.routeTo.label`) }}
       </button>
