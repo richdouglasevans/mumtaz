@@ -17,15 +17,13 @@ export default {
   data() {
     return {
       games: [
-        {
-          name: 'letterforms',
-          route: '/letterforms'
-        },
-        {
-          name: 'vowels',
-          route: '/vowels'
-        }
-      ]
+        'letterforms',
+        'vowels',
+        'numberforms'
+      ].map(game => ({
+        name: game,
+        route: `/${game}`
+      }))
     };
   }
 };

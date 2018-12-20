@@ -5,7 +5,7 @@ describe('The Lobby', () => {
     cy.visit('/');
   });
 
-  const games = ['letterforms', 'vowels'];
+  const games = ['letterforms', 'vowels', 'numberforms'];
 
   games.forEach(game => {
     it(`has a link to launch the "${game}" game.`, () => {

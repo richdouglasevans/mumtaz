@@ -1,9 +1,14 @@
 {
+  "lobby.heading": "देवनागरी",
+
   "alphabet.title": "अक्षर",
   "alphabet.title.altText": "Devanāgarī",
   "alphabet.streak": "streak",
   "alphabet.longestStreak": "longest",
   "alphabet.footer": "&copy; 2018&rsquo;s <a href=\"https://www.conted.ox.ac.uk/courses/sanskrit-1-beginners?code=O18P638XNW\">Sanskrit 1: Beginners</a>",
+
+  "letterforms.routeTo.label": "अक्षर—Letters",
+  "letterforms.routeTo.label.altText": "Letters",
 
   "attaboy.nice": "Sadhu",
   "attaboy.nice.image": "img/smile_128.png",
@@ -15,11 +20,11 @@
   "vowel-conjunctions.title": "स्वर",
   "vowel-conjunctions.title.altText": "Vowels",
   "vowel-conjunctions.conjoin": " + ",
-
-  "lobby.heading": "देवनागरी",
-
-  "letterforms.routeTo.label": "अक्षर—Letters",
-  "letterforms.routeTo.label.altText": "Letters",
   "vowels.routeTo.label": "स्वर—Vowels",
-  "vowels.routeTo.label.altText": "Vowels"
+  "vowels.routeTo.label.altText": "Vowels",
+
+  "numberforms.title": "सांख्य",
+  "numberforms.title.altText": "Samkhya",
+  "numberforms.routeTo.label": "सांख्य—Samkhya",
+  "numberforms.routeTo.label.altText": "Samkhya"
 }

@@ -1,6 +1,6 @@
 # mumtaz
 
-Micromaterials app for learning Sanskrit.
+Micromaterials for learning Sanskrit: http://sanskritsadhu.guru/#/
 
 > Inspired by [Adam Leskis'](https://github.com/lpmi-13) micromaterials for learning English.
 
@@ -14,9 +14,13 @@ Micromaterials app for learning Sanskrit.
 
 * _Vowel Conjunction_ :: joining consonants with vowels.
 
+* _Numbers_ :: recognizing the Devanagari numerals.
+
+* _What's The Next Number?_ :: ordering the Devanagari numerals.
+
 ## What Micromaterial Are Planned?
 
-* Joining consonants with consonants ([conjunction](http://learnsanskrit.org/references/devanagari/conjunct)).
+* _संयोग (saṃyoga)_ :: joining consonants with consonants ([conjunction](http://learnsanskrit.org/references/devanagari/conjunct)).
 
 ## Reference
 
@@ -30,18 +34,22 @@ Micromaterials app for learning Sanskrit.
 
 Emojis by [EmojiOne](https://www.emojione.com/).
 
-## Joining
+## Symbols
 
-    <!-- <div id="scratch"> -->
-      <!-- &#x903;&#x93f; -->
-      <!-- &#x0915;&#x93f;
-      <br>
-      &#x939;&#x93f; -->
-      <!-- <br>&#x0924; &#x094D; &#x200D; &#x0928;
-      <br>&#x0924;&#x094D;&#x200D;&#x0928;
-      <br>&#x0924;&#x094D; -->
-      <!-- halant symbol appended -->
-      <!-- &‌#x0901; -->
-      <!-- &#x0905; -->
-      <!-- &‌#x092F;&‌#x0917;&‌#x094B;&‌#x0440;&‌#x0940; -->
-    <!-- </div> -->
+* halanta `&#x094D;` &#x094D;
+
+<pre>
+  <!-- <div id="scratch"> -->
+    <!-- &#x903;&#x93f; -->
+    <!-- &#x0915;&#x93f;
+    &#x939;&#x93f; -->
+    <!-- <br>&#x0924; &#x094D; &#x200D; &#x0928;
+    <br>&#x0924;&#x094D;&#x200D;&#x0928;
+    <br>&#x0924;&#x094D; -->
+    <!-- halant symbol appended -->
+
+    <!-- &‌#x0901; -->
+    <!-- &#x0905; -->
+    <!-- &‌#x092F;&‌#x0917;&‌#x094B;&‌#x0440;&‌#x0940; -->
+  <!-- </div> -->
+</pre>
