@@ -19,10 +19,11 @@ export default {
       games: [
         'letterforms',
         'vowels',
-        'numberforms'
-      ].map(game => ({
-        name: game,
-        route: `/${game}`
+        'numberforms',
+        'nextNumber'
+      ].map(name => ({
+        name,
+        route: `/${name}`
       }))
     };
   }
@@ -38,12 +39,14 @@ export default {
 button {
   padding: 10px;
   border: 0;
+  border-bottom: 1px solid $c-tetsuo;
+  border-right: 1px solid $c-tetsuo;
   color: $c-tetsuo;
   font-size: 2.1em;
   background-color: $c-batman;
   font-family: inherit;
   font-weight: bold;
-  width: 100%;
+  width: 85%;
   margin-top: 20px;
 }
 </style>

@@ -1,9 +1,10 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Lobby from "./views/Lobby.vue";
-import Letterforms from "./views/Letterforms.vue";
 import Vowels from "./views/Vowels.vue";
 import Numberforms from "./views/Numberforms.vue";
+import Letterforms from "./views/Letterforms.vue";
+import TheNextNumber from "./views/TheNextNumber.vue";
 
 Vue.use(Router);
 
@@ -28,6 +29,11 @@ export default new Router({
       path: "/numberforms",
       name: "numberforms",
       component: Numberforms
+    },
+    {
+      path: "/nextnumber",
+      name: "nextnumber",
+      component: TheNextNumber
     }
   ]
 });

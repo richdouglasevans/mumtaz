@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import { vowels } from './stores/vowels';
+import { nextNumber } from './stores/nextNumber';
 import { letterforms } from './stores/letterforms';
 import { numberforms } from './stores/numberforms';
 
@@ -14,6 +15,7 @@ export default new Vuex.Store({
   modules: {
     letterforms,
     vowels,
-    numberforms
+    numberforms,
+    nextNumber
   }
 });

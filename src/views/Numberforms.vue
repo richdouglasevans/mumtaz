@@ -5,7 +5,8 @@
       {{ $t('numberforms.title') }}
     </h1>
     <number :number="round.number"
-            class="number number-big">
+            class="number number-big"
+            @number-chosen="skipNumber">
       <span v-html="round.number.encodings.htmlEntityHex"/>
     </number>
     <div class="transliterations">
