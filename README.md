@@ -30,6 +30,18 @@ Micromaterials for learning Sanskrit: http://sanskritsadhu.guru/#/
 * [Devanagari Letters](https://commons.wikimedia.org/wiki/Category:Devanagari_letters)
 * [Sanskrit 1: Beginners](https://www.conted.ox.ac.uk/courses/sanskrit-1-beginners?code=O18P638XNW)
 
+## Deployment
+
+Using [Surge](https://surge.sh/).
+
+```bash
+$ npm run build
+$ cd dist
+$ surge
+
+sanskritsadhu.guru
+```
+
 ## Emojis
 
 Emojis by [EmojiOne](https://www.emojione.com/).

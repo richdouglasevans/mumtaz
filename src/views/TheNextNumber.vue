@@ -9,10 +9,8 @@
             @number-chosen="skipNumber">
       <span v-html="round.number.encodings.htmlEntityHex"/>
     </number>
-    <input :value="chosenNumber"
-           type="number" required="true"
-           min="0" max="9"
-           @input="onNumberChosen"/>
+    <number-pad @number-chosen="onNumberChosen"
+                class="number-pad"/>
     <streak namespace="nextNumber"/>
   </main>
 </template>
@@ -22,21 +20,19 @@ import { createNamespacedHelpers } from 'vuex';
 import { Actions } from '@/stores/nextNumber';
 import Number from '@/components/Number';
 import Streak from '@/components/streak/Streak';
+import NumberPad from '@/components/NumberPad';
 
 const { mapState, mapActions } = createNamespacedHelpers('nextNumber');
 
 export default {
-  components: { Number, Streak },
+  components: { Number, Streak, NumberPad },
   created: function () {
     this.startOver();
   },
   computed: mapState(['round', 'chosenNumber']),
   methods: {
-    onNumberChosen(e) {
-      if (e.data && e.data.trim()) {
-        const chosenNumber = parseInt(e.data);
-        this.$store.dispatch(`nextNumber/${Actions.ChooseNumber}`, chosenNumber);
-      }
+    onNumberChosen(chosenNumber) {
+      this.$store.dispatch(`nextNumber/${Actions.ChooseNumber}`, chosenNumber);
     },
     ...mapActions({
       startOver: Actions.StartOver,
@@ -55,13 +51,7 @@ export default {
   min-height: 75px;
   font-size: 3.1em;
 }
-input {
-  width: 33%;
-  border: 2px solid $c-tetsuo;
-  text-align: center;
-  font-size: 3.1em;
-  align-self: center;
-  margin-bottom: 30px;
-  font-family: $c-lefont;
+.number-pad {
+  margin-bottom: 10px;
 }
 </style>
