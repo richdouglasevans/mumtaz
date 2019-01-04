@@ -31,6 +31,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+table {
+  width: 80%;
+  align-self: center;
+}
 td {
   width: 33%;
   text-align: center;
